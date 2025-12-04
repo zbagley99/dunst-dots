@@ -1,0 +1,148 @@
+/* --- Global Styles --- */
+* {
+    font-family: 'SF Pro Text', 'Inter', 'Segoe UI, NotoSans Nerd Font', sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  
+  
+  /* --- Waybar Container --- */
+  #waybar {
+    background: transparent;
+    color: #c6d0f5;
+    margin: 0px;
+    font-weight: 500;
+  }
+  
+  
+  /* --- Module Styles --- */
+  
+  /* Left Modules */ 
+  #workspaces,
+  #custom-pomodoro,
+  #custom-music,
+  
+  /* Center Module */
+  #clock,
+  
+  /* Right Modules */
+  #custom-uptime,
+  #cpu,
+  #custom-gpu,
+  #memory,
+  #pulseaudio,
+  #network,
+  #bluetooth,
+  #custom-lock,
+  #custom-reboot,
+  #custom-shutdown {
+    background-color: #1a1b26;
+    padding: 0.25rem 1rem;
+    margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */ 
+    margin-left: 5px;
+    border-radius: 6px; /* These modules are always rounded */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+    border: none;
+    /* Transition for background-color and color only */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+   /* Remove padding from workspaces module */
+  #workspaces {
+    padding: 0.2rem 0rem;
+  }
+  
+  /* Workspaces Button Styles */
+  #workspaces button {
+    color: #babbf1;
+    border-radius: 5px; /* Workspaces buttons are always rounded */
+    padding: 0.25rem 1rem;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
+  }
+  
+  #workspaces button.active {
+    color: #99d1db;
+    background-color: rgba(153, 209, 219, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
+  }
+  
+  /* Pomodoro Styles */
+  #custom-pomodoro.work,
+  #custom-pomodoro.break {
+    color: #99d1db; /* Text color consistent with active workspaces button */
+    background-color: rgba(153, 209, 219, 0.1); /* Background color consistent with active workspaces button */
+    box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2); /* Inner shadow for outline effect */
+    outline: none;
+  }
+  
+  /* Network Styles */
+  #network.disconnected {
+    color: #e78284;
+  }
+  
+  /* Bluetooth Styles */
+  #bluetooth.on {
+    color: #2196f3;
+  }
+  #bluetooth.connected {
+    color: #99d1db;
+  }
+  #battery {
+    color: #99d1db;;
+  }
+  #battery.charging {
+    color: #a6d189;
+  }
+  #battery.warning:not(.charging) {
+    color: #e78284;
+  }
+  
+  
+  /* --- Hover Effects --- */
+  
+  /* Left Modules */
+  #workspaces button:hover,
+  #custom-pomodoro:hover,
+  #custom-music:hover,
+  
+  /* Center Modules */ 
+  #clock:hover,
+  
+  /* Right Modules */
+  #custom-uptime:hover,
+  #cpu:hover,
+  #custom-gpu:hover,
+  #memory:hover,
+  #pulseaudio:hover,
+  #network:hover,
+  #bluetooth:hover,
+  #custom-lock:hover,
+  #custom-reboot:hover,
+  #custom-shutdown:hover {
+    background-color: rgb(41, 42, 53); /* Brighter highlight */
+    background-color: rgb(41, 42, 53); /* Brighter highlight, consistent with other individual modules */
+    color: #c6d0f5; /* Text color change on hover, consistent with other individual modules */
+    outline: 1px solid rgba(255, 255, 255, 0.1); /* Rectangular outline on hover */
+    outline-offset: -1px;
+  }
+  
+  /* --- Tooltip Styles --- */
+  tooltip {
+    background-color: #1a1b26;
+    color: #dddddd;
+    padding: 5px 12px;
+    margin: 5px 0px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+  }
+  
+  
