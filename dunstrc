@@ -1,4 +1,4 @@
-# Dunst configuration - matching Waybar theme
+# Dunst configuration - Catppuccin Mocha theme matching Waybar
 
 [global]
     # Display
@@ -6,37 +6,37 @@
     follow = mouse
 
     # Geometry
-    width = 300
-    height = 100
+    width = 350
+    height = 120
     origin = top-right
-    offset = 10x10
+    offset = 15x15
     scale = 0
     notification_limit = 5
 
-    # Progress bar
+    # Progress bar (shows countdown before auto-dismiss)
     progress_bar = true
-    progress_bar_height = 10
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
-    progress_bar_corner_radius = 3
+    progress_bar_height = 3
+    progress_bar_frame_width = 0
+    progress_bar_min_width = 320
+    progress_bar_max_width = 350
+    progress_bar_corner_radius = 2
 
-    # Appearance
+    # Appearance - Catppuccin Mocha theme
     transparency = 0
-    separator_height = 2
-    padding = 12
-    horizontal_padding = 12
-    text_icon_padding = 12
+    separator_height = 1
+    padding = 14
+    horizontal_padding = 14
+    text_icon_padding = 10
     frame_width = 1
     frame_color = "#292a35"
-    gap_size = 5
-    separator_color = frame
+    gap_size = 8
+    separator_color = "#292a35"
     sort = yes
-    idle_threshold = 120
+    idle_threshold = 0
 
     # Text
     font = SF Pro Text 11
-    line_height = 0
+    line_height = 1.4
     markup = full
     format = "<b>%s</b>\n%b"
     alignment = left
@@ -55,15 +55,15 @@
     max_icon_size = 64
 
     # History
-    sticky_history = yes
+    sticky_history = no
     history_length = 50
 
     # Misc
     browser = /usr/bin/xdg-open
-    always_run_script = true
+    always_run_script = false
     title = Dunst
     class = Dunst
-    corner_radius = 6
+    corner_radius = 8
     ignore_dbusclose = false
 
     # Mouse actions
@@ -72,22 +72,31 @@
     mouse_right_click = close_all
 
 [urgency_low]
+    # Green accent for low urgency - auto-dismisses after 5 seconds
     background = "#1a1b26"
     foreground = "#c6d0f5"
     highlight = "#a6d189"
     frame_color = "#a6d189"
     timeout = 5
+    # Progress bar color for low urgency
+    progress_bar_color = "#a6d189"
 
 [urgency_normal]
+    # Cyan accent for normal urgency - auto-dismisses after 10 seconds
     background = "#1a1b26"
     foreground = "#c6d0f5"
     highlight = "#99d1db"
     frame_color = "#99d1db"
     timeout = 10
+    # Progress bar color for normal urgency
+    progress_bar_color = "#99d1db"
 
 [urgency_critical]
+    # Red accent for critical urgency - does NOT auto-dismiss
     background = "#1a1b26"
     foreground = "#c6d0f5"
     highlight = "#e78284"
     frame_color = "#e78284"
     timeout = 0
+    # Progress bar color for critical urgency (used for volume/brightness indicators)
+    progress_bar_color = "#e78284"
